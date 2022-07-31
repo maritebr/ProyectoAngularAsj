@@ -1,0 +1,202 @@
+.titleNosotros {
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding-top: 110px;
+}
+
+.titleNosotros span{
+  display: inline-block;
+  -webkit-animation: bounce 1s ease infinite alternate;
+  font-size: 80px;
+  color: #F2BA52;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+  0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+  0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.titleNosotros span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+.titleNosotros span:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.titleNosotros span:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+}
+
+.titleNosotros span:nth-child(5) {
+  -webkit-animation-delay: 0.7s;
+}
+
+.titleNosotros span:nth-child(6) {
+  -webkit-animation-delay: 0.9s;
+}
+
+.titleNosotros span:nth-child(7) {
+  -webkit-animation-delay: 1s;
+}
+
+.titleNosotros span:nth-child(8) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.titleNosotros span:nth-child(9) {
+  -webkit-animation-delay: 0.5s;
+}
+
+.titleNosotros span:nth-child(10) {
+  -webkit-animation-delay: 0.7s;
+}
+
+.titleNosotros span:nth-child(11) {
+  -webkit-animation-delay: 0.9s;
+}
+
+.titleNosotros span:nth-child(12) {
+  -webkit-animation-delay: 1.1s;
+}
+
+.titleNosotros span:nth-child(13) {
+  -webkit-animation-delay: 1.3s;
+}
+
+.titleNosotros span:nth-child(14) {
+  -webkit-animation-delay: 1.5s;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+    0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/*prueba filtros*/
+
+.botonEspecie{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/*FILTROS*/
+
+.filtros{
+  display: flex;
+  flex-direction: column;
+}
+.filtroContent{
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.filtroContent .filtrosVarios{
+  display: flex;
+  width: 100%;
+}
+
+.filtrosVarios h4{
+  font-size: 1rem;
+}
+
+.filtrosVarios{
+  background-color: #f4e2c2;
+  border: white solid 1px;
+}
+
+.botonesEspecie, .botonesTamano, .botonesEdad, .botonesSexo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content:left;
+  align-items: center;
+  padding: 2rem 0;
+  border: white solid 1px;
+}
+
+.botonesEdad .peque{
+  font-size: 0.8rem;
+  padding: 0.8rem 0;
+}
+
+.botonFiltro{
+  border: none;
+  background-color: #f1c87a;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 44px;
+  letter-spacing: 2px;
+  padding: 6px ;
+  width: 5rem;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.textoFiltro{
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.textoFiltro h1{
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.textoFiltro{
+  font-size: 1rem;
+}
+
+.card{
+  width: 400px;
+  margin: 50px 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.card img{
+  height: 270px;
+}
+
+.card-body{
+  background-color: #f1d5a0;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.card-footer{
+  background-color: #f1c87a;
+}
+
+.galeria{
+  padding: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container{
+  width: 30%;
+  margin: 10px auto;
+  padding: 1rem;
+  background-color: #f1d5a0;
+  border-radius: 15px;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+form .btn{
+  display: flex;
+  margin: 20px auto;
+  color: white;
+}
+
+form label{
+  padding: 5px;
+}
+

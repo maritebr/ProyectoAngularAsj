@@ -1,0 +1,35 @@
+<div class="container">
+
+<table class="table table-striped">
+
+  <thead class="table tablaEncab">
+  <tr>
+    <th colspan="5" >
+      <h2 class="text-center">Lista de usuarios</h2>
+    </th>
+  </tr>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Email</th>
+    <th>Comentarios</th>
+    <th>Acciones</th>
+  </tr>
+  </thead>
+
+  <tbody class="table-warning">
+    <tr *ngFor = "let usuario of usuarios">
+      <td>{{usuario.nombre}}</td>
+      <td>{{usuario.apellido}}</td>
+      <td>{{usuario.email}}</td>
+      <td>{{usuario.comentarios}}</td>
+      <td>
+        <button class="btn m-2" (click)="modificarUsuario(usuario.id)" >Editar</button>
+        <button class="btn " (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+      </td>
+
+    </tr>
+  </tbody>
+
+</table>
+</div>

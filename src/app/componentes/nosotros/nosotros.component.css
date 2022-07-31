@@ -1,0 +1,260 @@
+/*SECTION NOSOTROS*/
+
+.sectionNosotros{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.linea{
+  background-color: #f1c87a;
+  margin-top: 30px;
+  width: 50%;
+  height: 3px;
+}
+
+.titleNosotros {
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding-top: 110px;
+}
+
+.titleNosotros span {
+  display: inline-block;
+  -webkit-animation: bounce 1s ease infinite alternate;
+  font-size: 80px;
+  color: #F2BA52;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+  0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+  0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.titleNosotros span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+.titleNosotros span:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.titleNosotros span:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+}
+
+.titleNosotros span:nth-child(5) {
+  -webkit-animation-delay: 0.7s;
+}
+
+.titleNosotros span:nth-child(6) {
+  -webkit-animation-delay: 0.9s;
+}
+
+.titleNosotros span:nth-child(7) {
+  -webkit-animation-delay: 1s;
+}
+
+.titleNosotros span:nth-child(8) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.titleNosotros span:nth-child(9) {
+  -webkit-animation-delay: 0.5s;
+}
+
+.titleNosotros span:nth-child(10) {
+  -webkit-animation-delay: 0.7s;
+}
+
+.titleNosotros span:nth-child(11) {
+  -webkit-animation-delay: 0.9s;
+}
+
+.titleNosotros span:nth-child(12) {
+  -webkit-animation-delay: 1.1s;
+}
+
+.titleNosotros span:nth-child(13) {
+  -webkit-animation-delay: 1.3s;
+}
+
+.titleNosotros span:nth-child(14) {
+  -webkit-animation-delay: 1.5s;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+    0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.parrafoNos{
+  display: flex;
+  width: 60%;
+  padding: 100px 0 ;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.parrafoNos img{
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.parrafoNos p{
+  padding-left: 30px;
+  width: 50%;
+}
+
+.parrafoNos p::first-letter {
+  font-size: 2rem;
+  color: #D9A273;
+}
+
+.nosotros2{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.subtitleNosotros{
+  font-size: 3.5rem;
+  padding-top: 2rem;
+  color: #585756;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.nosotros2 p::first-letter{
+  font-size: 2rem;
+  color:#D9A273;
+}
+
+.nosotros2 .galeriaAcciones{
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+  align-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.galeriaAcciones .itemComo , .galeriaAcciones .itemComo p {
+  -webkit-transition: all 1s cubic-bezier(.42,.2,.2,.64);
+  -moz-transition: all 1s cubic-bezier(.42,.2,.2,.64);
+  -o-transition: all 1s cubic-bezier(.42,.2,.2,.64);
+  transition: all 1s cubic-bezier(.42,.2,.2,.64);
+}
+
+.galeriaAcciones .itemComo {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 5px;
+  list-style-type: none;
+}
+
+.galeriaAcciones .itemComo:hover {
+  z-index: 99;
+}
+
+.galeriaAcciones .itemComo p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #f5f5ec;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background: #f4e1be;
+  border-radius: 100px;
+  font-size: 0.5rem;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.galeriaAcciones .itemComo p:hover {
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  top: 50%;
+  left: 50%;
+  background-color: #442f09;
+  color: white;
+  border-radius: 40px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.itemComo{
+  display: flex ;
+  flex-direction: row;
+  text-align: start;
+}
+
+.itemComo i {
+  font-size: 1rem;
+}
+
+.imgPerros img{
+  display:flex;
+  width: 80%;
+  z-index: -1;
+  animation-name: mianimacion;
+  animation-duration: 6s;
+  position: relative;
+  animation-timing-function: linear;
+  animation-iteration-count:10 ;
+}
+
+@keyframes mianimacion {
+  0%{left: 0; top: 0;}
+  25%{left: 300px; top: 0px;}
+  50%{left: 300px; top: 150px;}
+  75%{left:0px; top: 150px;}
+  100%{left: 0; top: 0;}
+}
+
+.btn{
+  background-color: #442f09;
+  color: white;
+  margin-right: 150px;
+  padding: 40px;
+  border-radius: 150px;
+  text-transform: uppercase;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.7rem;
+}
+.btn:hover{
+  border: #F2BA52 8px solid;
+  background-color: white;
+  color: #442f09;
+}
+
+.btnMuestra {
+  font-family: 'Pathway Gothic One', sans-serif;
+  width: 40%;
+  color: #585756;
+  border-radius: 150px;
+  font-size: 3.4rem;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+}

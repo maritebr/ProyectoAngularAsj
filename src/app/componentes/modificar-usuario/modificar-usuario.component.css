@@ -1,0 +1,43 @@
+.formulario{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  background-color: #f1c87a;
+  border-radius: 30px;
+  padding: 2rem;
+  color: white;
+}
+
+.tituloForm{
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tituloForm h2{
+  font-size: 2.5rem;
+}
+
+.registroModal p{
+  width: 60%;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  margin-left: 100px;
+  padding: 20px;
+  font-size: 1.3rem;
+  color: #442f09;
+}
+.btn{
+  background-color: #442f09;
+  color: white;
+}
+.formulario .btn{
+  display: flex;
+  margin: 0 auto;
+}
+
+.formulario2{
+  background-color: #f1c87a;
+}

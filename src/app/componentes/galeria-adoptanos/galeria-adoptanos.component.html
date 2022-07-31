@@ -1,0 +1,164 @@
+<section id="filtros" class="filtros">
+
+  <div class="textoFiltro">
+
+    <h1 class="titleNosotros">
+      <span>E</span>
+      <span>L</span>
+      <span>L</span>
+      <span>O</span>
+      <span>S</span>
+    </h1>
+
+    <h2>TE ESPERAN...</h2>
+
+    <p>¡Ya están desparasitados, vacunados y esterilizados!</p>
+
+  </div>
+
+  <div class="filtroContent">
+
+    <div class="filtrosVarios">
+
+      <div class="botonesEspecie">
+
+        <h4 class="tituloFiltros" >Especie animal </h4>
+        <br>
+
+        <div class="botones">
+          <button class="botonFiltro" (click)="aplicarFiltro('perro')">Perro</button>
+          <button class="botonFiltro" (click)="aplicarFiltro('gato')" >Gato</button>
+          <button class="botonFiltro" (click)="aplicarFiltro('')" >Todos</button>
+        </div>
+      </div>
+
+      <div class="botonesTamano">
+
+        <h4 class="tituloFiltros" >Tamaño </h4>
+        <br>
+
+        <div class="botones">
+          <button class="botonFiltro" (click)="aplicarFiltroTamanio('chico')" >Chico</button>
+          <button class="botonFiltro" (click)="aplicarFiltroTamanio('mediano')" >Mediano</button>
+          <button class="botonFiltro" (click)="aplicarFiltroTamanio('grande')" >Grande</button>
+          <button class="botonFiltro" (click)="aplicarFiltroTamanio('')" >Todos</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="galeria" class="galeria">
+
+  <div class="row row-cols-1 row-cols-md-3 md-3">
+
+    <div *ngFor="let mascota of mascotas" class="box perro"><!--FIJARTE EL NGIF-->
+      <div class="col">
+        <div class="card" >
+          <div>
+          <img src="{{mascota.image}}" class="card-img-top" alt="perro en adopcion">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title"> Nombre: {{mascota.nombre}}</h4>
+            <p class="card-text"> Especie: {{mascota.especie}}</p>
+            <p class="card-text"> Tamaño: {{mascota.tamanio}}</p>
+            <p class="card-text"> Edad: {{mascota.edad}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<div class="container">
+
+  <p class="text-lg-center">PRUEBA DE REGISTRO DE MASCOTA</p>
+
+<form autocomplete="off" (ngSubmit)="enviarForm(form)" #form="ngForm" class="form-control-sm form">
+
+  <div class="row">
+    <div class="col form-group">
+      <label for="image" class="form-label ">Imagen</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Ingresa url de imagen"
+             id="image"
+             name="image"
+             [(ngModel)]="mascota.image"
+             required
+      >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col form-group">
+      <label for="name" class="form-label ">Nombre</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Ingresa tu nombre"
+             aria-label="First name"
+             id="name"
+             name="nombre"
+             [(ngModel)]="mascota.nombre"
+             required
+             >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col form-group">
+      <label for="especie" class="form-label ">Especie</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Ingresa tu nombre"
+             aria-label="First name"
+             id="especie"
+             name="especie"
+             [(ngModel)]="mascota.especie"
+             required
+             >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col form-group">
+      <label for="tamanio" class="form-label ">Tamaño</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Ingresa tu nombre"
+             aria-label="First name"
+             id="tamanio"
+             name="tamanio"
+             [(ngModel)]="mascota.tamanio"
+             required
+             >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col form-group">
+      <label for="edad" class="form-label ">Edad</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Ingresa tu nombre"
+             aria-label="First name"
+             id="edad"
+             name="edad"
+             [(ngModel)]="mascota.edad"
+             required
+             >
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-warning" [disabled]="form.invalid" >Registrar</button>
+
+</form>
+</div>

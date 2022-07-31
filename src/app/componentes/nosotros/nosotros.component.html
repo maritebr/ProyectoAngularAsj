@@ -1,0 +1,73 @@
+<section id="sectionNosotros" class="sectionNosotros">
+
+  <div class="linea"></div>
+
+  <h1 class="titleNosotros">
+    <span>N</span>
+    <span>O</span>
+    <span>S</span>
+    <span>O</span>
+    <span>T</span>
+    <span>R</span>
+    <span>O</span>
+    <span>S</span>
+  </h1>
+
+  <div class="parrafoNos">
+
+    <img src="../../../assets/img/pata.jpg" alt="" data-aos="flip-left">
+
+    <p *ngIf="mostrarNosotros; else ocultarNosotros" data-aos="fade-left">Somos una organización sin fines de lucro liderada por un grupo de voluntarios que buscan superar la situación de sobrepoblación, abandono, crueldad e indiferencia que viven millones de animales en nuestro país, especialmente en Buenos Aires. Propiciamos una actitud de respeto hacia todas las especies, entendiendo que no son “cosas” para ser utilizadas por el ser humano. Rechazamos todo tipo de explotación animal, incluyendo su uso como vestimenta, comida, entretenimiento y experimentación.</p>
+
+    <ng-template #ocultarNosotros>
+      <button class="btnMuestra" data-aos="fade-left" (click)="mostrarNosotros=!mostrarNosotros">{{ mostrarNosotros? 'Ocultar' : 'Somos...' }}<i class="fa fa-paw"></i></button>
+    </ng-template>
+
+
+  </div>
+
+  <div class="linea"></div>
+
+  <ng-template #ocultoCT>
+    <button class="btnMuestra" (click)="mostrarCT=!mostrarCT">{{ mostrarCT? 'Ocultar' : '¿COMO TRABAJAMOS?' }}<i class="fa fa-paw"></i></button>
+  </ng-template>
+
+  <div id="nosotros2" class="nosotros2" *ngIf="mostrarCT; else ocultoCT">
+
+    <h2 class="subtitleNosotros">¿COMO TRABAJAMOS?</h2>
+
+    <div class="galeriaAcciones" >
+
+      <div class="itemComo">
+        <p>La acción directa: asistir a animales abandonados en situación de riesgo, promoviendo su adopción y tenencia por parte de hogares responsables que estén en condiciones de brindarles albergue, atención y afecto.<i class="fa fa-paw"></i>
+      </div>
+
+      <div class="itemComo">
+        <p>La acción preventiva: fomentar entre el público general la necesidad y la importancia de castrar machos, esterilizar las hembras, y exigiendo a las autoridades la aplicación de las leyes a las qu estan obligados como campañas de castración gratuitas para el control de la población animal.<i class="fa fa-paw"></i></p>
+      </div>
+
+      <div class="itemComo">
+        <p>Las acciones en el plano legislativo y judicial: exigir la aplicación de la ley 14.346 de protección animal y denunciar ante las autoridades todo acto de maltrato y crueldad; presentar y apoyar proyectos de ley que beneficien a los animales.<i class="fa fa-paw"></i></p>
+      </div>
+
+      <div class="itemComo">
+        <p>Las actividades educativas: desarrollar actividades educativas sobre trato ético hacia los animales.<i class="fa fa-paw"></i></p>
+      </div>
+
+      <div class="itemComo">
+        <p>Las actividades asistenciales: rescatar animales en situación de riesgo con el fin de recuperarlos y darles la posibilidad de formar parte de una familia que le brinde lo que necesita.<i class="fa fa-paw"></i></p>
+      </div>
+
+      <div class="itemComo">
+        <p>Las actividades solidarias: ecrear lazos de colaboración entre entidades y empresas comprometidos en la problemática animal.<i class="fa fa-paw"></i></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="imgPerros">
+    <img src="../../../assets/img/perris.png" alt="perros" class="perros">
+  </div>
+
+</section>

@@ -1,0 +1,89 @@
+
+#aportes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0 8rem;
+  background-color: #f8efdf;
+}
+
+#aportes .titleNosotros{
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 100;
+  /*border: 1px solid;*/
+}
+
+.texto1 h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 100%;
+  /*border: 1px solid;*/
+}
+
+.texto1 p{
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.imgAportes{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1 rem;
+  margin: 0 auto;
+}
+
+.imgAportes img{
+  width: 30rem;
+  height: 18rem;
+  margin: 2rem;
+  /* border: 0.5px solid #f1c87a; */
+}
+
+.aporte a:hover{
+  color:#F2B6AC;
+}
+
+.post {
+  width: 550px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.post:hover .pie {
+  width: 100%;
+}
+
+.post img {
+  display: block;
+}
+
+.post .pie {
+  width: 0;
+  height: 100%;
+  background: #442f09de;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+}
+
+.pie h2 {
+  color: #fff;
+  font-size: 2rem;
+  border: 6px solid #fff;
+  padding: .8em 1.9em;
+}

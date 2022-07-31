@@ -1,0 +1,198 @@
+<div class="container formulario">
+
+  <div class="tituloForm">
+    <h2>¿Querés adoptar o ser voluntario?</h2>
+    <p>Escribinos!</p>
+  </div>
+
+<form autocomplete="off" (ngSubmit)="enviarForm(form)" #form="ngForm">
+
+  <div class="row">
+    <div class="col form-group">
+      <label for="name" class="form-label ">Nombre</label>
+      <input #nombreInput = 'ngModel'
+             type="text"
+             class="form-control"
+             placeholder="Ingresa tu nombre"
+             aria-label="First name"
+             id="name"
+             name="nombre"
+             [(ngModel)]="usuario.nombre"
+             required
+             minlength="2"
+             pattern="[a-zA-Z ]{2,254}"
+      >
+
+      <div *ngIf="nombreInput.invalid && nombreInput.dirty" >
+        <p class="mt-3 alert alert-danger" *ngIf="nombreInput.errors['required']">Campo obligatorio</p>
+        <p class="mt-3 alert alert-danger" *ngIf="nombreInput.errors['minlength']">Este campo debe contener más de 2 caracteres</p>
+        <p class="mt-3 alert alert-danger" *ngIf="nombreInput.errors['pattern']">Solo puedes ingresar letras</p>
+      </div>
+
+
+    </div>
+
+    <div class="col form-group">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input #apellidoInput = 'ngModel'
+             type="text"
+             class="form-control"
+             placeholder="Ingresa tu apellido"
+             aria-label="Last name"
+             id="apellido"
+             name="apellido"
+             [(ngModel)]="usuario.apellido"
+             required
+             minlength="2"
+             pattern="[a-zA-Z ]{2,254}">
+
+      <div *ngIf="apellidoInput.invalid && apellidoInput.dirty" >
+        <p class="mt-3 alert alert-danger" *ngIf="apellidoInput.errors['required']">Campo obligatorio</p>
+        <p class="mt-3 alert alert-danger" *ngIf="apellidoInput.errors['minlength']">Este campo debe contener más de 2 caracteres</p>
+        <p class="mt-3 alert alert-danger" *ngIf="apellidoInput.errors['pattern']">Solo puedes ingresar letras</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="mb-3 mt-3 form-group">
+    <label for="email" class="form-label">Email</label>
+    <input #emailInput = 'ngModel'
+           type="email"
+           class="form-control"
+           aria-describedby="emailHelp"
+           id="email1"
+           name="email"
+           placeholder="mail@mail.com"
+           [(ngModel)]="usuario.email"
+           required
+           email>
+
+    <div *ngIf="emailInput.invalid && emailInput.dirty" >
+      <p class="mt-3 alert alert-danger" *ngIf="emailInput.errors['required']">Campo obligatorio</p>
+      <p class="mt-3 alert alert-danger" *ngIf="emailInput.errors['email']">Ejemplo: email@mail.com</p>
+    </div>
+
+  </div>
+
+  <div class="mb-3 form-group">
+    <label for="comentarios" class="form-label">Comentarios</label>
+    <textarea #comentarios='ngModel'
+              class="form-control"
+              id="comentarios" rows="3"
+              placeholder="Si tienes alguna duda o consulta, escribinos y nos contactaremos con vos!"
+              name="comentarios"
+              [(ngModel)]="usuario.comentarios"
+              required
+              minlength="5"
+              maxlength="200">
+    </textarea>
+
+    <div *ngIf="comentarios.invalid && comentarios.dirty" >
+      <p class="mt-3 alert alert-danger" *ngIf="comentarios.errors['required']">Campo obligatorio</p>
+      <p class="mt-3 alert alert-danger" *ngIf="comentarios.errors['minlength']">Debes ingresar más de 5 carácteres</p>
+      <p class="mt-3 alert alert-danger" *ngIf="comentarios.errors['maxlength']">Puedes ingresar hasta 200 carácteres</p>
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn" [disabled]="form.invalid" >Enviar</button>
+
+  <hr>
+
+
+</form>
+
+  <div class="registroModal">
+    <p> Suscribete y asi podrás recibir novedades e información sobre nosotros</p>
+    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Quiero suscribirme!
+    </button>
+
+  </div>
+
+</div>
+
+
+<!--EMPIEZO FORM MODAL-->
+
+<!-- Modal-->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content formulario2">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Suscribite</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form [formGroup]="formGroup" autocomplete="off">
+
+            <div class="mb-3 mt-3 form-group">
+              <label for="nombre" class="form-label ">Nombre</label>
+              <input type="text"
+                     class="form-control"
+                     placeholder="Ingresa tu nombre"
+                     aria-label="First name"
+                     id="nombre"
+                     name="nombre"
+                     formControlName="nombre">
+
+              <div *ngIf="formGroup.controls['nombre'].errors && formGroup.controls['nombre'].dirty" class="mt-3 alert alert-danger">
+                <p *ngIf="formGroup.controls['nombre'].errors['required']">Campo Requerido</p>
+                <p *ngIf="formGroup.controls['nombre'].errors['minlength']">Cantidad minima: {{minimoCar}} caracteres</p>
+                <p *ngIf="formGroup.controls['nombre'].errors['pattern']">Ingrese solo letras</p>
+              </div>
+            </div>
+
+
+            <div class="mb-3 mt-3 form-group">
+              <label for="apellido1" class="form-label">Apellido</label>
+              <input type="text"
+                     class="form-control"
+                     placeholder="Ingresa tu apellido"
+                     aria-label="Last name"
+                     id="apellido1"
+                     name="apellido"
+                     formControlName="apellido">
+
+              <div *ngIf="formGroup.controls['apellido'].errors && formGroup.controls['apellido'].dirty" class="mt-3 alert alert-danger">
+                <p *ngIf="formGroup.controls['apellido'].errors['required']">Campo Requerido</p>
+                <p *ngIf="formGroup.controls['apellido'].errors['minlength']">Cantidad minima: {{minimoCar}} caracteres</p>
+                <p *ngIf="formGroup.controls['apellido'].errors['pattern']">Ingrese solo letras</p>
+              </div>
+
+            </div>
+
+
+          <div class="mb-3 mt-3 form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email"
+                   class="form-control"
+                   aria-describedby="emailHelp"
+                   placeholder="mail@mail.com"
+                   id="email"
+                   name="email"
+                   formControlName="email">
+
+            <div *ngIf="formGroup.controls['email'].errors && formGroup.controls['email'].dirty" class="mt-3 alert alert-danger">
+              <p *ngIf="formGroup.controls['email'].errors['required']">Campo Requerido</p>
+              <p *ngIf="formGroup.controls['email'].errors['pattern']">Ejemplo: mail@mail.com</p>
+            </div>
+
+
+          </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid" (click)="enviarFormModal()">Enviar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

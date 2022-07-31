@@ -1,0 +1,53 @@
+/*SECTION ADOPCIONES*/
+
+.titleAdop{
+  font-size: 3.5rem;
+  padding: 1rem 2rem 1rem;
+  margin-top: 2rem;
+  color:#F2BA52;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.adopciones{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items:center;
+  margin: 120px auto;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #f8efdf;
+  background-image: url(src/assets/img/Imagen1.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.titleAdop{
+  font:400 2em amatic sd;
+  width: 100%;
+  letter-spacing: 5px;
+  text-align:center;
+  padding-top:140px;
+  color: #F2BA52;
+  font-weight: 700;
+}
+
+.contenedorSlide2{
+  display: flex;
+  width: 46%;
+  background-color: #73482f63;
+  border-radius: 15px;
+}
+
+.agradecer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-top: 4rem;
+  color: #73482F;
+  padding-bottom: 4rem;
+}
