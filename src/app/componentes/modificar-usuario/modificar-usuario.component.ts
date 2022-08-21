@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {UsuarioService} from "../../servicios/usuario.service";
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 import {Usuario} from "../../dominio/usuario";
+
 
 @Component({
   selector: 'app-modificar-usuario',
@@ -11,15 +12,22 @@ import {Usuario} from "../../dominio/usuario";
 })
 export class ModificarUsuarioComponent implements OnInit {
 
+  id: string;
   usuario:Usuario= new Usuario();
 
-  constructor(private usuarioServicio:UsuarioService, private router:Router) { }
+  constructor(private usuarioServicio:UsuarioService, private router:Router, private route: ActivatedRoute) {
+    this.id = this.route.snapshot.paramMap.get('id');
+    console.log(this.id)
+  }
 
   ngOnInit(): void {
+    this.usuarioServicio.getById(this.id).subscribe( dato =>{
+      this.usuario=dato;
+    },error => console.log(error));
   }
 
   guardarUsuario(){
-    this.usuarioServicio.registrarUsuario(this.usuario).subscribe(dato =>{
+    this.usuarioServicio.modificarUsuarios(this.id, this.usuario).subscribe(dato =>{
       console.log(dato);
       this.chequearListaUsuario();
     },error => console.log(error));

@@ -16,7 +16,8 @@ export class GaleriaAdoptanosComponent implements OnInit {
     nombre: String,
     especie: String,
     tamanio: String,
-    edad: String
+    edad: String,
+    sexo: String,
   }>;
 
   mascota: Mascota = new Mascota;

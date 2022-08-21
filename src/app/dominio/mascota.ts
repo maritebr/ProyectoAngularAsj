@@ -4,4 +4,5 @@ export class Mascota {
   tamanio: string;
   edad: string;
   especie: string;
+  sexo: string;
 }

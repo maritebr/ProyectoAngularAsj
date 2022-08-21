@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class UsuariosListaComponent implements OnInit {
 
-  usuarios: Usuario [];
+  usuarios: Usuario[];
 
   constructor(private usuarioServicio: UsuarioService, private router:Router) { }
 
@@ -32,7 +32,11 @@ export class UsuariosListaComponent implements OnInit {
 
   private getUsuarios(){
     this.usuarioServicio.getListaUsuarios().subscribe(dato=>{
-      this.usuarios = dato;
+      if (dato.estado){
+        console.log(dato)
+        this.usuarios = dato.datos;
+      }
+
     });
 
   }

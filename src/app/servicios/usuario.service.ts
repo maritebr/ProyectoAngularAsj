@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Usuario} from "../dominio/usuario";
+import {Usuario,ServiceUsuario} from "../dominio/usuario";
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +13,9 @@ export class UsuarioService {
 
   constructor(private httpClient : HttpClient) { }
 
-  //con este metodo traigo mis usuarios
-  getListaUsuarios(): Observable<Usuario[]>{
-    return this.httpClient.get<Usuario[]>(`${this.baseURL}`)
+  //con este metodo traigo los usuarios
+  getListaUsuarios(): Observable<ServiceUsuario>{
+    return this.httpClient.get<ServiceUsuario>(`${this.baseURL}`)
   }
 
   //este metodo sirve para registrar el usuario
@@ -23,11 +23,11 @@ export class UsuarioService {
     return this.httpClient.post(`${this.baseURL}`, usuario)
   }
 
-  getById(id:number):Observable<Object>{
-    return this.httpClient.get(`${this.baseURL}/${id}`);
+  getById(id:string):Observable<Usuario>{
+    return this.httpClient.get<Usuario>(`${this.baseURL}/${id}`);
   }
 
-  modificarUsuario(id:number, usuario:Usuario): Observable<Object>{
+  modificarUsuarios(id: string, usuario: Usuario): Observable<Object>{
     return this.httpClient.put(`${this.baseURL}/${id}`, usuario);
   }
 
